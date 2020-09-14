@@ -4,7 +4,9 @@ import com.xuanner.seq.exception.SeqException;
 
 /**
  * 序列号生成器接口
- * Created by xuan on 2018/1/10.
+ *
+ * @author xuan
+ * @date 2018/1/10
  */
 public interface Sequence {
 

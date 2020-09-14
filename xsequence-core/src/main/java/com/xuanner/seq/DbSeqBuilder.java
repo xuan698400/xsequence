@@ -8,7 +8,9 @@ import javax.sql.DataSource;
 
 /**
  * 基于DB取步长，序列号生成器构建者
- * Created by xuan on 2018/5/30.
+ *
+ * @author xuan
+ * @date 2018/5/30
  */
 public class DbSeqBuilder implements SeqBuilder {
 
@@ -24,15 +26,15 @@ public class DbSeqBuilder implements SeqBuilder {
     /**
      * 存放序列号步长的表[可选：默认：sequence]
      */
-    private String tableName  = "sequence";
+    private String tableName = "sequence";
     /**
      * 并发是数据使用了乐观策略，这个是失败重试的次数[可选：默认：100]
      */
-    private int    retryTimes = 100;
+    private int retryTimes = 100;
     /**
      * 获取range步长[可选：默认：1000]
      */
-    private int    step       = 1000;
+    private int step = 1000;
 
     /**
      * 序列号分配起始值[可选：默认：0]

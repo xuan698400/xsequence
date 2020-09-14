@@ -10,7 +10,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 序列号区间生成器接口默认实现
- * Created by xuan on 2018/1/10.
+ *
+ * @author xuan
+ * @date 2018/1/10
  */
 public class DefaultRangeSequence implements RangeSequence {
 

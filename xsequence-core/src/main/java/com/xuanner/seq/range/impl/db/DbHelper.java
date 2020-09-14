@@ -3,6 +3,7 @@ package com.xuanner.seq.range.impl.db;
 import com.xuanner.seq.exception.SeqException;
 
 import javax.sql.DataSource;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,20 +13,22 @@ import java.sql.Timestamp;
 
 /**
  * 操作DB帮助类
- * Created by xuan on 2018/4/29.
+ *
+ * @author xuan
+ * @date 2018/4/29
  */
-abstract class DbHelper {
+class DbHelper {
 
     private static final long DELTA = 100000000L;
 
     private final static String SQL_CREATE_TABLE =
-            "CREATE TABLE IF NOT EXISTS #tableName(" + "id bigint(20) NOT NULL AUTO_INCREMENT,"
+        "CREATE TABLE IF NOT EXISTS #tableName(" + "id bigint(20) NOT NULL AUTO_INCREMENT,"
             + "value bigint(20) NOT NULL," + "name varchar(32) NOT NULL," + "gmt_create DATETIME NOT NULL,"
             + "gmt_modified DATETIME NOT NULL," + "PRIMARY KEY (`id`),UNIQUE uk_name (`name`)" + ")";
     private final static String SQL_INSERT_RANGE =
-            "INSERT IGNORE INTO #tableName(name,value,gmt_create,gmt_modified)" + " VALUE(?,?,?,?)";
+        "INSERT IGNORE INTO #tableName(name,value,gmt_create,gmt_modified)" + " VALUE(?,?,?,?)";
     private final static String SQL_UPDATE_RANGE =
-            "UPDATE #tableName SET value=?,gmt_modified=? WHERE name=? AND " + "value=?";
+        "UPDATE #tableName SET value=?,gmt_modified=? WHERE name=? AND " + "value=?";
     private final static String SQL_SELECT_RANGE = "SELECT value FROM #tableName WHERE name=?";
 
     /**
@@ -142,14 +145,14 @@ abstract class DbHelper {
 
             if (oldValue < 0) {
                 String msg =
-                        "Sequence value cannot be less than zero, value = " + oldValue + ", please check table sequence"
+                    "Sequence value cannot be less than zero, value = " + oldValue + ", please check table sequence"
                         + tableName;
                 throw new SeqException(msg);
             }
 
             if (oldValue > Long.MAX_VALUE - DELTA) {
                 String msg =
-                        "Sequence value overflow, value = " + oldValue + ", please check table sequence" + tableName;
+                    "Sequence value overflow, value = " + oldValue + ", please check table sequence" + tableName;
                 throw new SeqException(msg);
             }
 

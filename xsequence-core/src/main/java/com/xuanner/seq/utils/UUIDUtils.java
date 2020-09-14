@@ -4,7 +4,9 @@ import java.net.InetAddress;
 
 /**
  * UUID 生成工具类
- * Created by xuan on 2018/5/30.
+ *
+ * @author xuan
+ * @date 2018/5/30
  */
 public class UUIDUtils {
 
@@ -22,8 +24,8 @@ public class UUIDUtils {
         IP = ipadd;
     }
 
-    private static       short counter = (short) 0;
-    private static final int   JVM     = (int) (System.currentTimeMillis() >>> 8);
+    private static short counter = (short)0;
+    private static final int JVM = (int)(System.currentTimeMillis() >>> 8);
 
     private UUIDUtils() {
     }
@@ -35,7 +37,7 @@ public class UUIDUtils {
      */
     private String generateHex() {
         return (format(getIP()) + format(getJVM()) + format(getHighTime()) + format(getLowTime()) + format(
-                getCount())).toUpperCase();
+            getCount())).toUpperCase();
     }
 
     private String format(int intval) {
@@ -83,11 +85,11 @@ public class UUIDUtils {
      * Unique down to millisecond
      */
     private short getHighTime() {
-        return (short) (System.currentTimeMillis() >>> 32);
+        return (short)(System.currentTimeMillis() >>> 32);
     }
 
     private int getLowTime() {
-        return (int) System.currentTimeMillis();
+        return (int)System.currentTimeMillis();
     }
 
     private static int toInt(byte[] bytes) {
@@ -106,5 +108,5 @@ public class UUIDUtils {
     public static String uuid() {
         return uuid.generateHex();
     }
-    
+
 }

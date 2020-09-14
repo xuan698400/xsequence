@@ -37,7 +37,7 @@ public class UUIDTest_Jmh {
 
     public static void main(String[] args) throws RunnerException {
         Options options = new OptionsBuilder().include(UUIDTest_Jmh.class.getSimpleName()).output(
-                "/Users/xuan/Documents/Code/xuan/gitee/xsequence/doc/jmh/UUIDTest_Jmh.log").forks(4).build();
+                "/Users/xuan/Desktop/code/github/xsequence_log/UUIDTest_Jmh.log").forks(4).build();
         new Runner(options).run();
     }
 

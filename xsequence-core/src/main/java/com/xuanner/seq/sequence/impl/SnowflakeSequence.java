@@ -18,7 +18,9 @@ import com.xuanner.seq.sequence.Sequence;
  * （5）最后12位是毫秒内的计数（12位的计数顺序号支持每个节点每毫秒产生4096个ID序号）
  * <br>
  * 一共加起来刚好64位，为一个Long型。(转换成字符串长度为18)
- * Created by xuan on 2018/5/9.
+ *
+ * @author xuan
+ * @date 2018/5/9
  */
 public class SnowflakeSequence implements Sequence {
 
@@ -119,9 +121,9 @@ public class SnowflakeSequence implements Sequence {
 
         //移位并通过或运算拼到一起组成64位的ID
         return ((timestamp - twepoch) << timestampLeftShift) //
-               | (datacenterId << datacenterIdShift) //
-               | (workerId << workerIdShift) //
-               | sequence;
+            | (datacenterId << datacenterIdShift) //
+            | (workerId << workerIdShift) //
+            | sequence;
     }
 
     /**

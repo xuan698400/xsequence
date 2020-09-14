@@ -5,7 +5,9 @@ import com.xuanner.seq.sequence.impl.SnowflakeSequence;
 
 /**
  * 基于雪花算法，序列号生成器构建者
- * Created by xuan on 2018/5/30.
+ *
+ * @author xuan
+ * @date 2018/5/30
  */
 public class SnowflakeSeqBuilder implements SeqBuilder {
 
@@ -35,7 +37,7 @@ public class SnowflakeSeqBuilder implements SeqBuilder {
         this.datacenterId = datacenterId;
         return this;
     }
-    
+
     public SnowflakeSeqBuilder workerId(long workerId) {
         this.workerId = workerId;
         return this;

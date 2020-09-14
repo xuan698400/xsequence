@@ -4,7 +4,9 @@ import com.xuanner.seq.exception.SeqException;
 
 /**
  * 区间管理器
- * Created by xuan on 2018/1/10.
+ *
+ * @author xuan
+ * @date 2018/1/10
  */
 public interface SeqRangeMgr {
 

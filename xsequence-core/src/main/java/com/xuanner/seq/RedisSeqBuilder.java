@@ -6,7 +6,9 @@ import com.xuanner.seq.sequence.impl.DefaultRangeSequence;
 
 /**
  * 基于redis取步长，序列号生成器构建者
- * Created by xuan on 2018/5/30.
+ *
+ * @author xuan
+ * @date 2018/5/30
  */
 public class RedisSeqBuilder implements SeqBuilder {
 
@@ -17,7 +19,7 @@ public class RedisSeqBuilder implements SeqBuilder {
     /**
      * 连接redis的port[必选]
      */
-    private int    port;
+    private int port;
     /**
      * 业务名称[必选]
      */

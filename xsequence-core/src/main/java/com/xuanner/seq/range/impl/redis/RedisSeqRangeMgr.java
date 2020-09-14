@@ -4,11 +4,12 @@ import com.xuanner.seq.exception.SeqException;
 import com.xuanner.seq.range.SeqRange;
 import com.xuanner.seq.range.SeqRangeMgr;
 import redis.clients.jedis.Jedis;
-import redis.clients.jedis.Pipeline;
 
 /**
  * Redis区间管理器
- * Created by xuan on 2018/5/8.
+ *
+ * @author xuan
+ * @date 2018/5/8
  */
 public class RedisSeqRangeMgr implements SeqRangeMgr {
 
@@ -25,7 +26,7 @@ public class RedisSeqRangeMgr implements SeqRangeMgr {
     /**
      * IP
      */
-    private String  ip;
+    private String ip;
     /**
      * PORT
      */
@@ -64,7 +65,7 @@ public class RedisSeqRangeMgr implements SeqRangeMgr {
         }
 
         Long max = jedis.incrBy(getRealKey(name), step);
-        Long min = max - step + 1;
+        long min = max - step + 1;
         return new SeqRange(min, max);
     }
 

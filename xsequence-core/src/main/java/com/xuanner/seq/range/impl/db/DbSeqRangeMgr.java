@@ -8,7 +8,9 @@ import javax.sql.DataSource;
 
 /**
  * DB区间管理器
- * Created by xuan on 2018/4/29.
+ *
+ * @author xuan
+ * @date 2018/4/29
  */
 public class DbSeqRangeMgr implements SeqRangeMgr {
 
@@ -20,15 +22,15 @@ public class DbSeqRangeMgr implements SeqRangeMgr {
     /**
      * 区间步长
      */
-    private int  step       = 1000;
+    private int step = 1000;
     /**
      * 区间起始位置，真实从stepStart+1开始
      */
-    private long stepStart  = 0;
+    private long stepStart = 0;
     /**
      * 获取区间失败重试次数
      */
-    private int  retryTimes = 100;
+    private int retryTimes = 100;
     /**
      * DB来源
      */
@@ -45,7 +47,7 @@ public class DbSeqRangeMgr implements SeqRangeMgr {
         }
 
         Long oldValue;
-        Long newValue;
+        long newValue;
 
         for (int i = 0; i < getRetryTimes(); i++) {
             oldValue = DbHelper.selectRange(getDataSource(), getRealTableName(), name, getStepStart());
