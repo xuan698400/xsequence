@@ -1,0 +1,4 @@
+JMH S 26 com.xuanner.seq.DbTest_Jmh S 49 com.xuanner.seq.generated.DbTest_Jmh_test_jmhTest S 4 test S 10 Throughput I 1 8 A 1 1 1 E I 1 1 T 3 1 s E I 1 3 T 3 3 s E I 1 1 E E E E E E U 7 SECONDS E E 
+JMH S 33 com.xuanner.seq.SnowflakeTest_Jmh S 56 com.xuanner.seq.generated.SnowflakeTest_Jmh_test_jmhTest S 4 test S 10 Throughput I 1 8 A 1 1 1 E I 1 1 T 3 1 s E I 1 3 T 3 3 s E I 1 1 E E E E E E U 7 SECONDS E E 
+JMH S 28 com.xuanner.seq.UUIDTest_Jmh S 51 com.xuanner.seq.generated.UUIDTest_Jmh_test_jmhTest S 4 test S 10 Throughput I 1 8 A 1 1 1 E I 1 1 T 3 1 s E I 1 3 T 3 3 s E I 1 1 E E E E E E U 7 SECONDS E E 
+JMH S 29 com.xuanner.seq.RedisTest_Jmh S 52 com.xuanner.seq.generated.RedisTest_Jmh_test_jmhTest S 4 test S 10 Throughput I 1 8 A 1 1 1 E I 1 1 T 3 1 s E I 1 3 T 3 3 s E I 1 1 E E E E E E U 7 SECONDS E E 

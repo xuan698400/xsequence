@@ -1,0 +1,12 @@
+dontinline,*.*_all_jmhStub
+dontinline,*.*_avgt_jmhStub
+dontinline,*.*_sample_jmhStub
+dontinline,*.*_ss_jmhStub
+dontinline,*.*_thrpt_jmhStub
+inline,com/xuanner/seq/DbTest_Jmh.setup
+inline,com/xuanner/seq/DbTest_Jmh.test
+inline,com/xuanner/seq/RedisTest_Jmh.setup
+inline,com/xuanner/seq/RedisTest_Jmh.test
+inline,com/xuanner/seq/SnowflakeTest_Jmh.setup
+inline,com/xuanner/seq/SnowflakeTest_Jmh.test
+inline,com/xuanner/seq/UUIDTest_Jmh.test
