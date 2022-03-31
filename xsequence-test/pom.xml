@@ -9,7 +9,7 @@
     <version>1.6</version>
 
     <properties>
-        <org.springframework.version>4.1.5.RELEASE</org.springframework.version>
+        <org.springframework.version>5.3.18</org.springframework.version>
     </properties>
 
     <dependencies>
